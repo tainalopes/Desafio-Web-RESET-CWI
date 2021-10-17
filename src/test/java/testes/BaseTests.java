@@ -9,7 +9,7 @@ import utils.Utils;
 public class BaseTests {
 
     @Before
-    @Step("abre o navegador e insere a url que está lá no utils")
+    @Step("Abre o navegador e insere a url que está lá no utils")
     public void setup(){
         Browser.loadPage(Utils.getBaseUrl());
     }
