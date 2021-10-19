@@ -96,11 +96,7 @@ public class SetupTest extends BaseTests {
         String address = "E La Palma Ave 3321";
         assertEquals(checkoutPage.getTextCorrectlyAddress(), address);
 
-        checkoutPage.btnProceedToCheckoutForShipping();
-        checkoutPage.clickAgree();
-        checkoutPage.clickBtnProceed();
-        checkoutPage.clickPayByBankWire();
-        checkoutPage.clickBtnConfirmMyOrder();
+        checkoutPage.doCheckoutPage();
 
     }
 }

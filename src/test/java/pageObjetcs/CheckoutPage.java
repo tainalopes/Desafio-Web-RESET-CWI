@@ -11,11 +11,6 @@ public class CheckoutPage extends CheckoutPageElementMapper {
         PageFactory.initElements(Browser.getCurrentDriver(), this);
     }
 
-//    @Step("Verificando se o está na página correta")
-//    public String getTextAddressDelivery(){
-//        return address_delivery.getText();
-//    }
-
     @Step("Verificando se o endereço de entrega é o mesmo que o preenchido")
     public String getTextCorrectlyAddress(){
         return correctly_address.getText();
@@ -40,5 +35,14 @@ public class CheckoutPage extends CheckoutPageElementMapper {
     @Step("Confirmar a compra")
     public void clickBtnConfirmMyOrder(){
         btn_confirm_my_order.click();
+    }
+
+    @Step("Método que junta os métodos acima")
+    public void doCheckoutPage(){
+        btnProceedToCheckoutForShipping();
+        clickAgree();
+        clickBtnProceed();
+        clickPayByBankWire();
+        clickBtnConfirmMyOrder();
     }
 }
